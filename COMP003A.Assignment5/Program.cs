@@ -29,13 +29,11 @@ namespace COMP003A.Assignment5
             Console.WriteLine("\t   Favorite Character Section ");
             PrintSeparator();
 
-            int age;
-
             Console.Write("Enter a character: ");
             string inputName = Convert.ToString(Console.ReadLine());
             Console.Write("Enter their birth year: ");
             int birthYear = Convert.ToInt32(Console.ReadLine());
-            age = AgeCalculator(birthYear);
+            int age = AgeCalculator(birthYear);
             Console.WriteLine($"{inputName} turns {age} this year!");
 
 
