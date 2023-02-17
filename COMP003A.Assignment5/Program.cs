@@ -2,6 +2,7 @@
  *  Author: Matthew Alvarez
  *  Course: COMP-003A
  *  Purpose: Assignment 5 - Looping Structures
+ *  just testing GitHub
  */
 
 using System.Collections.Generic;
