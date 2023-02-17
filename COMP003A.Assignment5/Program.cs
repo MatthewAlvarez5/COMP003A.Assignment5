@@ -1,7 +1,7 @@
 ﻿/* 
  *  Author: Matthew Alvarez
  *  Course: COMP-003A
- *  Purpose: Assignment 5 - Looping Structures
+ *  Purpose: Assignment 5 - Methods and XML Comments
  */
 
 using System.Collections.Generic;
@@ -14,10 +14,11 @@ namespace COMP003A.Assignment5
         static void Main(string[] args)
         {
             Console.Title = "COMP-003A - Assignment 5";
-            
-            PrintSeparator("\tTriangle");   //call method PrintSeparator(string)
 
             /* Triangle Section */
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            PrintSeparator("\tTriangle");   //call method PrintSeparator(string)
+
             Console.Write("Enter a positive whole digit: ");
             int size = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter a character: ");
@@ -26,6 +27,7 @@ namespace COMP003A.Assignment5
             isoscelesTriangleBuilder(inputString, size);    //Call method
             Console.Write("\n");
 
+            Console.ForegroundColor = ConsoleColor.Yellow;
             /*Favorite Characters Section*/
             PrintSeparator("   Favorite Characters");   //Call method
 
@@ -56,24 +58,30 @@ namespace COMP003A.Assignment5
                     userChoice2 = Convert.ToString(Console.ReadLine());
                     if(userChoice2 == "Y" || userChoice2 == "y" || userChoice2 == "N" || userChoice2 == "n")
                     {
-                        PrintSeparator();
+                        if (userChoice2 == "Y" || userChoice2 == "y")
+                        {
+                            PrintSeparator();
+                        }
                     }
                     else
                     {
-                        Console.WriteLine("Invalid Input!");
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        Console.WriteLine("\nInvalid Input!\n");
                     }
                 } while (userChoice2 == "Y" || userChoice2 == "y");
             }
             else 
-            { 
-                Console.WriteLine("Invalid Input!");
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("\nInvalid Input!\n");
             }
 
             // End of Code Separator
+            Console.ForegroundColor = ConsoleColor.Red;
             PrintSeparator();
             Console.WriteLine("\t\tEnd of Code");
             PrintSeparator();
-
+            Console.ForegroundColor = ConsoleColor.Black ;
         }
         
         /// <summary>
